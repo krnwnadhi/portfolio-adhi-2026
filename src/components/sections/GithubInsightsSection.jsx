@@ -14,7 +14,6 @@ import {
     IconBrandGithub,
     IconExternalLink,
     IconFolderCode,
-    IconGitPullRequest,
     IconStar,
     IconUsers,
 } from "@tabler/icons-react";
@@ -48,11 +47,6 @@ export default function GithubInsightsSection() {
             val: profile?.followers ?? 0,
             icon: IconUsers,
         },
-        // {
-        //     label: "Public Gists",
-        //     val: profile?.public_gists ?? 0,
-        //     icon: IconGitPullRequest,
-        // },
     ];
 
     return (
