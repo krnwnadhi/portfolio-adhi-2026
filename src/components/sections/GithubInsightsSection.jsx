@@ -48,11 +48,11 @@ export default function GithubInsightsSection() {
             val: profile?.followers ?? 0,
             icon: IconUsers,
         },
-        {
-            label: "Public Gists",
-            val: profile?.public_gists ?? 0,
-            icon: IconGitPullRequest,
-        },
+        // {
+        //     label: "Public Gists",
+        //     val: profile?.public_gists ?? 0,
+        //     icon: IconGitPullRequest,
+        // },
     ];
 
     return (
@@ -65,7 +65,7 @@ export default function GithubInsightsSection() {
 
                 {/* Metrik Statistik */}
                 <RevealOnScroll direction="left" delay={0.3}>
-                    <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="lg" mb="xl">
+                    <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="lg" mb="xl">
                         {statItems.map((item) => (
                             <Paper
                                 key={item.label}
@@ -105,50 +105,50 @@ export default function GithubInsightsSection() {
                 </RevealOnScroll>
 
                 {/* Heatmap Kontribusi */}
-                <RevealOnScroll direction="left" delay={0.3}></RevealOnScroll>
-                <Paper
-                    p="xl"
-                    radius="md"
-                    withBorder
-                    mb="xl"
-                    style={{ overflowX: "auto" }}
-                >
-                    <Group justify="space-between" mb="md">
-                        <Group gap="xs">
-                            <IconBrandGithub size={20} />
-                            <Text fw={700} size="md">
-                                Annual Contribution Graph
-                            </Text>
-                        </Group>
-                        <Anchor
-                            href={`https://github.com/${username}`}
-                            target="_blank"
-                            size="xs"
-                            c="blue"
-                        >
-                            View GitHub Profile →
-                        </Anchor>
-                    </Group>
-                    <div
-                        style={{
-                            display: "flex",
-                            justifyContent: "center",
-                            minWidth: "720px",
-                        }}
+                <RevealOnScroll direction="left" delay={0.3}>
+                    <Paper
+                        p="xl"
+                        radius="md"
+                        withBorder
+                        mb="xl"
+                        style={{ overflowX: "auto" }}
                     >
-                        <GitHubCalendar
-                            username={username}
-                            colorScheme={
-                                colorScheme === "dark" ? "dark" : "light"
-                            }
-                            theme={themeGraph}
-                            blockSize={13}
-                            blockMargin={4}
-                            fontSize={12}
-                        />
-                    </div>
-                </Paper>
-                <RevealOnScroll direction="left" delay={0.3}></RevealOnScroll>
+                        <Group justify="space-between" mb="md">
+                            <Group gap="xs">
+                                <IconBrandGithub size={20} />
+                                <Text fw={700} size="md">
+                                    Annual Contribution Graph
+                                </Text>
+                            </Group>
+                            <Anchor
+                                href={`https://github.com/${username}`}
+                                target="_blank"
+                                size="xs"
+                                c="blue"
+                            >
+                                View GitHub Profile →
+                            </Anchor>
+                        </Group>
+                        <div
+                            style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                minWidth: "720px",
+                            }}
+                        >
+                            <GitHubCalendar
+                                username={username}
+                                colorScheme={
+                                    colorScheme === "dark" ? "dark" : "light"
+                                }
+                                theme={themeGraph}
+                                blockSize={13}
+                                blockMargin={4}
+                                fontSize={12}
+                            />
+                        </div>
+                    </Paper>
+                </RevealOnScroll>
 
                 {/* Repositori Terakhir Diperbarui */}
                 <Text fw={700} size="lg" mb="md">
