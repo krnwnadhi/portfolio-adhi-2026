@@ -25,7 +25,6 @@ export default function HeroSection() {
     const roleTextRef = useRef(null);
 
     useEffect(() => {
-        // Inisialisasi Typed.js untuk Profile Role
         const typed = new Typed(roleTextRef.current, {
             strings: profile.roles || [profile.role],
             typeSpeed: 50,
@@ -35,6 +34,8 @@ export default function HeroSection() {
             loop: true,
             showCursor: true,
             cursorChar: "|",
+            contentType: null,
+            smartBackspace: true,
         });
 
         return () => {
@@ -72,17 +73,21 @@ export default function HeroSection() {
                                     }}
                                 >
                                     Hello, I'm{" "}
-                                    <Text component="span" c="blue" inherit>
+                                    <Text
+                                        component="span"
+                                        inherit
+                                        variant="gradient"
+                                        gradient={{
+                                            from: "blue",
+                                            to: "cyan",
+                                            deg: 90,
+                                        }}
+                                    >
                                         {profile.name}
                                     </Text>
                                 </Title>
                             </RevealOnScroll>
 
-                            {/* <Text size="xl" fw={600} c="dimmed">
-                                {profile.role}
-                            </Text> */}
-
-                            {/* Typed.js Role Animation */}
                             <RevealOnScroll direction="up" delay={0.3}>
                                 <Text
                                     size="xl"

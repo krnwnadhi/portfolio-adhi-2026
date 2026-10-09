@@ -4,7 +4,6 @@ export const PORTFOLIO_DATA = {
 
     profile: {
         name: "ADHI",
-        // role: "Fullstack Javascript Developer",
         roles: [
             "Fullstack Web & Mobile Developer",
             "React & Next.js Specialist",
