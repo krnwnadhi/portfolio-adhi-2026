@@ -50,7 +50,7 @@ export default function HeroSection() {
             style={{ padding: "5rem 0" }}
         >
             <Container size="lg">
-                <Grid align="center" gutter={40}>
+                <Grid align="center" gutter={{ base: "xl", md: 45 }}>
                     <Grid.Col span={{ base: 12, md: 7 }}>
                         <Stack gap="md">
                             <RevealOnScroll direction="down" delay={0.1}>
@@ -159,7 +159,11 @@ export default function HeroSection() {
                             </RevealOnScroll>
                         </Stack>
                     </Grid.Col>
-                    <Grid.Col span={{ base: 12, md: 5 }}>
+
+                    <Grid.Col
+                        span={{ base: 12, md: 5 }}
+                        mt={{ base: "2.5rem", md: 0 }}
+                    >
                         <RevealOnScroll direction="left" delay={0.3}>
                             <Group justify="center">
                                 <Avatar

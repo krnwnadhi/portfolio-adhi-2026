@@ -37,7 +37,7 @@ export default function Navbar() {
                         href="#home"
                         fw={800}
                         size="lg"
-                        px={0}
+                        px={10}
                     >
                         {PORTFOLIO_DATA.profile.name}
                     </Button>
