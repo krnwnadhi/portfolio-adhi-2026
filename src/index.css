@@ -1,0 +1,124 @@
+/* src/index.css */
+
+/* 1. Global Smooth Scroll & Offset untuk Sticky Navbar */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px; /* Mencegah konten tertabrak navbar saat scroll */
+}
+
+/* 2. Micro Animations: Floating Avatar */
+@keyframes floatAnimation {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hero-avatar-floating {
+    animation: floatAnimation 4s ease-in-out infinite;
+    box-shadow: 0 10px 30px rgba(18, 184, 134, 0.25);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.hero-avatar-floating:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 14px 35px rgba(18, 184, 134, 0.4);
+}
+
+/* 3. Reusable Hover Lift Effect untuk Cards (DRY Concept) */
+.hover-lift {
+    transition:
+        transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.25s ease !important;
+}
+
+.hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border-color: var(--mantine-color-teal-6) !important;
+}
+
+/* 4. Soft Fade-in untuk Sections */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-section {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+//Hero Section
+/* src/index.css */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+/* Floating animation avatar */
+@keyframes floatAnimation {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hero-avatar-floating {
+    animation: floatAnimation 4s ease-in-out infinite;
+    box-shadow: 0 10px 30px rgba(18, 184, 134, 0.25);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.hero-avatar-floating:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 14px 35px rgba(18, 184, 134, 0.4);
+}
+
+/* Reusable Hover Lift */
+.hover-lift {
+    transition:
+        transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.25s ease !important;
+}
+
+.hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border-color: var(--mantine-color-teal-6) !important;
+}
+
+/* Typed.js Cursor Styling */
+.typed-cursor {
+    color: var(--mantine-color-teal-5);
+    font-weight: 300;
+    animation: typedBlink 0.8s infinite;
+    margin-left: 2px;
+}
+
+@keyframes typedBlink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
