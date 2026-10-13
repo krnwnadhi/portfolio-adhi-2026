@@ -32,7 +32,7 @@ export default function ProjectsSection() {
                                 padding="lg"
                                 radius="md"
                                 withBorder
-                                className="hover-lift"
+                                className="hero-avatar-floating"
                             >
                                 <Card.Section>
                                     <Image
@@ -56,7 +56,7 @@ export default function ProjectsSection() {
                                     <Text fw={700} size="lg">
                                         {proj.title}
                                     </Text>
-                                    <Text size="sm" c="dimmed" lineClamp={3}>
+                                    <Text size="sm" c="dimmed" lineClamp={4}>
                                         {proj.desc}
                                     </Text>
                                 </Stack>
