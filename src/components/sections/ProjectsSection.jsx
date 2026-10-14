@@ -85,20 +85,7 @@ export default function ProjectsSection() {
                                         }
                                         flex={1}
                                     >
-                                        Live Demo
-                                    </Button>
-                                    <Button
-                                        component="a"
-                                        href={proj.github}
-                                        target="_blank"
-                                        variant="default"
-                                        size="xs"
-                                        leftSection={
-                                            <IconBrandGithub size={14} />
-                                        }
-                                        flex={1}
-                                    >
-                                        Code
+                                        Demo
                                     </Button>
                                 </Group>
                             </Card>

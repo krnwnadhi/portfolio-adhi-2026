@@ -80,11 +80,11 @@ export const PORTFOLIO_DATA = {
             desc: "A healthcare reporting information system designed for community health centers (Puskesmas) to monitor, log, and streamline tuberculosis (TB) patient case tracking.",
             image: "https://res.cloudinary.com/degzbxlnx/image/upload/v1791779866/b6b47c04-13c6-4f84-858a-e6c82d02b9c6_mkxi3m.jpg",
             tags: ["React Native", "React Native Paper"],
-            demo: "https://example.com",
+            demo: "#",
             github: "https://github.com",
         },
         {
-            title: "Biro Administrasi Pembangunan Provinsi Jambi",
+            title: "BIRO ADMINISTRASI PEMBANGUNAN PROVINSI JAMBI",
             desc: "Official regional development administration portal for Jambi Provincial Government, streamlining developmental project monitoring, documentation, and reporting workflows.",
             image: "https://res.cloudinary.com/degzbxlnx/image/upload/v1791779840/4027bfc9-e118-406d-9a48-35b77eb8e5ca_xmgkzq.jpg",
             tags: [
@@ -100,12 +100,12 @@ export const PORTFOLIO_DATA = {
             github: "https://github.com",
         },
         {
-            title: "Hibahku",
+            title: "HIBAHKU",
             desc: "A government grant management and tracking platform built to enhance transparency, proposal administration, and public funding disbursement monitoring.",
             image: "https://res.cloudinary.com/degzbxlnx/image/upload/v1791779858/2f7017a6-22ea-4a9b-8b24-45bc4700f1f1_vsajx5.jpg",
             tags: [
                 "ReactJS",
-                "Mantine v7",
+                "Mantine UI v7",
                 "React-Redux",
                 "React Router",
                 "Express",

@@ -24,8 +24,6 @@ import RevealOnScroll from "../common/RevealOnScroll.jsx";
 import SectionTitle from "../common/SectionTitle.jsx";
 import { useGithubData } from "../../hooks/useGithubData.js";
 
-// BENAR (Mendukung react-github-calendar v5+)
-
 export default function GithubInsightsSection() {
     const { colorScheme } = useMantineColorScheme();
     const username = PORTFOLIO_DATA.githubUsername;
@@ -98,7 +96,7 @@ export default function GithubInsightsSection() {
                     </SimpleGrid>
                 </RevealOnScroll>
 
-                {/* Heatmap Kontribusi */}
+                {/* Heatmap */}
                 <RevealOnScroll direction="left" delay={0.3}>
                     <Paper
                         p="xl"
