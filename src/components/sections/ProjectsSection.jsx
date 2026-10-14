@@ -9,8 +9,8 @@ import {
     Stack,
     Text,
 } from "@mantine/core";
-import { IconBrandGithub, IconExternalLink } from "@tabler/icons-react";
 
+import { IconExternalLink } from "@tabler/icons-react";
 import { PORTFOLIO_DATA } from "../../data/portfolioData.js";
 import RevealOnScroll from "../common/RevealOnScroll.jsx";
 import SectionTitle from "../common/SectionTitle.jsx";

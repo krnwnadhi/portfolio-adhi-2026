@@ -1,6 +1,5 @@
 import {
     Badge,
-    Button,
     Card,
     Container,
     Image,
@@ -8,7 +7,6 @@ import {
     SimpleGrid,
     Text,
 } from "@mantine/core";
-import { IconExternalLink, IconEye } from "@tabler/icons-react";
 
 import { PORTFOLIO_DATA } from "../../data/portfolioData.js";
 import RevealOnScroll from "../common/RevealOnScroll.jsx";
@@ -66,33 +64,8 @@ export default function CertificationsSection() {
                                     mt="xs"
                                     mb="md"
                                 >
-                                    {cert.issuer} • {cert.date}
+                                    {cert.date}
                                 </Badge>
-
-                                <Button.Group>
-                                    <Button
-                                        variant="light"
-                                        size="xs"
-                                        leftSection={<IconEye size={14} />}
-                                        onClick={() => setActiveCert(cert)}
-                                        flex={1}
-                                    >
-                                        Preview
-                                    </Button>
-                                    <Button
-                                        component="a"
-                                        href={cert.verifyUrl}
-                                        target="_blank"
-                                        variant="default"
-                                        size="xs"
-                                        leftSection={
-                                            <IconExternalLink size={14} />
-                                        }
-                                        flex={1}
-                                    >
-                                        Verify
-                                    </Button>
-                                </Button.Group>
                             </Card>
                         ))}
                     </SimpleGrid>
@@ -108,14 +81,7 @@ export default function CertificationsSection() {
                 >
                     {activeCert && (
                         <>
-                            <Image
-                                src={activeCert.image}
-                                radius="md"
-                                alt={activeCert.title}
-                            />
-                            <Text size="sm" c="dimmed" mt="sm">
-                                Credential ID: {activeCert.id}
-                            </Text>
+                            <Image src={activeCert.image} radius="md" />
                         </>
                     )}
                 </Modal>
